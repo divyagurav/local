@@ -16,7 +16,8 @@ function addItem(e) {
     var li = document.createElement('li');
     li.className = 'list-group-item';
     li.appendChild(document.createTextNode(newItem));
-    localStorage.setItem(newItem, newItem);
+    localStorage.setItem(user, newItem);
+
 
     var deleteBtn = document.createElement('button');
     deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
@@ -46,3 +47,10 @@ function filterItems(e) {
         }
     });
 }
+
+let myObj = {
+    item: newItem
+};
+
+console.log(myObj.item);
+
